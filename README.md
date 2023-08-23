@@ -8,7 +8,7 @@ El objetivo del siguiente ejercicio es aplicar las operaciones CRUD (Create, Rea
 
 ![screenshot_CRUD](https://github.com/Tania-Bobadilla/Ejercicio_CRUD/assets/135383254/9e2239be-b7c9-486b-b94c-e6daa9c12472)
 
-## 3. Tecnologia utilizadas
+## 3. Tecnologías utilizadas
 - HTML
 - CSS
 - JavaScript
