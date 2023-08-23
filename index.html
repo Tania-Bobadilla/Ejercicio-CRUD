@@ -6,6 +6,70 @@
     <title>Tus valoraciones de productos</title>
 </head>
 <body>
+
+    <!-- Titulo -->
+    <header>
+        <h1>Tus valoraciones de productos</h1>
+        <!-- <h2>Evalúa tu última adquisición</h2> -->
+    </header>
+    <br>
+
+    <!-- Formulario -->
+    <main class="container">
+        <section class="form-section">
+            <form>
+                <div class="user-box">
+                    <label for="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="inputUser" placeholder="Nombre de usuario">
+                </div>
+                <div class="product-box">
+                    <label for="form-label">Producto</label>
+                    <input type="text" class="form-control" id="inputProduct" placeholder="Producto a evaluar">
+                </div>
+                <div class="assess-box">
+                    <label for="form-label">Valoración</label>
+                    <input type="number" min="1" max="10" class="form-control" id="inputAssess" placeholder="Nota entre el 1 y el 10">
+                    <!-- <textarea class="form-control" id="inputReview" placeholder="Tu valoración debe corresponder a un numero entre el 1 y el 10"></textarea> -->
+                </div>
+                <!-- este el el div que encierra los botones -->
+                <div class="button-box">
+                    <button type="submit" id="btnAdd" onclick="addData()">Enviar datos</button>
+                    <!-- por el momento el boton de actualizar esta aqui de forma estatica, pero deberia hacerse aparecer desde js cuando necesitemos actulizar los datos, es decir se va a convertir en un evento, la funcion Update es la que hara que aperezca el boton en el html-->
+                    <button type="submit" id="btnUpdate">Actualizar datos</button>
+                </div>
+            </form>
+        </section>   
+        <br>     
+
+        <!-- Tabla donde se van pintando los datos introducidos -->
+        <section class="table-section">
+            <table id="tableData" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col" class="user">Usuario</th>
+                        <th scope="col" class="product">Producto</th>
+                        <th scope="col" class="assess">Valoración</th>
+                        <th scope="col" class="actions">Acciones</th>
+                    </tr>
+                </thead>
+
+                <!-- Los datos son pintados en el cuerpo de la tabla una vez se presiona el boton de "enviar datos" del formulario -->
+                <tbody>
+            
+                </tbody>
+            </table>    
+        </section>
+    </main>
+    <br>
+
+    <!-- Pie de pagina -->
+    <footer>
+        <p class="p-1">This is a fake page made for academic purposes to show the implementation of HTML, JavaScript and CSS in a CRUD exercise. Please, do not delete it.</p>
+        <p class="p-2">©2023, UDD DWFS Bootcamp</p>
+    </footer>
+
+    
+    <script src="./app2.js"></script>
     
 </body>
 </html>
