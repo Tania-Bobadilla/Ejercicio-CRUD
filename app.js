@@ -10,7 +10,7 @@ function validateForm() {
     //Validacion de usuario
     if(user ==''){
 
-        //Si cualquiera de los compos esta vacio, se genera una alarma que le indica al usuario que rellene el campo correspondiente
+        //Si cualquiera de los campos esta vacio, se genera una alerta que le indica al usuario que rellene el campo correspondiente
         alert('El nombre de usuario es obligatorio');
         return false; 
     }
@@ -29,18 +29,14 @@ function validateForm() {
         alert('La evaluación debe corresponder a un número entre el 1 y el 10')
         return false
     };
-    //estaba haciendo esta condicional por que no quiere que se pueda introducir un numero menor a 1 o mayor a 10
-    // }else if(assess < 1 || > 10 ){
-    //     alert('jkdsjkds')
-    // }
-
+    
     //Si todos los campos son introducidos correctamente, entonces se retorna un valor verdadero
     return true;
 }
 
 //La siguiente funcion es para "pintar" (mostrar) en la tabla del HTML los datos una vez
 //estos fueron correctamente introducidos y enviados por el usuario.
-//Al igual que en que en la funcion de addData (mas abajo) primero hay que inicializar un array vacio para guardar informacion
+//Al igual que en la funcion de addData (mas abajo) primero hay que inicializar un array vacio para guardar informacion
 function showData() {
     let assessSub;
     if (localStorage.getItem('assessSub') == null) {
@@ -49,7 +45,7 @@ function showData() {
         assessSub = JSON.parse(localStorage.getItem('assessSub'));
     }
 
-    //Con esta variable permitira pintar en la tabla los datos introducidos por el usuario
+    //Esta variable permitira pintar en la tabla los datos introducidos por el usuario
     let html = '';
 
     //A continuacion, el metodo forEach va a leer el array creando anteriormente y cada vez que se encuentre
@@ -63,12 +59,12 @@ function showData() {
         html += '<td>' +element.assess+ '</td>'
 
         //Tambien se agregan los botones para borrar y editar los datos ingresados
-        //y al boton deleteData se le pasa como parametro el index del alemento para ques identifique que tiene que borrar
+        //y al boton deleteData se le pasa como parametro el index del elemento para que identifique que tiene que borrar
         html += '<td><button onclick="deleteData('+index+')" class="delete-btn">Eliminar</button> <button onclick="updateData('+index+')" class="update-btn">Editar</button></td>';
         html += '</tr>'
     });
 
-    //Se actualiza en contenido de la pagina web, los datos ingresados se muestran en la tabla.
+    //Se actualiza el contenido de la pagina web, los datos ingresados se muestran en la tabla.
     //El tbody dentro de los parentesis es donde se va a mostrar (pintar) esta info
     document.querySelector('#tableData tbody').innerHTML = html;    
   
@@ -121,7 +117,7 @@ function addData() {
     }
 }
 
-//Funcion qpara borrar datos
+//Funcion para borrar datos
 function deleteData(index){
     let assessSub;
     if(localStorage.getItem('assessSub') == null) {
@@ -140,15 +136,15 @@ function deleteData(index){
     showData();
 }
 
-//Funcion para actualizar los datos (con los botones "editar" y "actulizar")
+//Funcion para actualizar los datos (con los botones "editar" y "actualizar")
 function updateData(index){
 
-    //Con esta sentencia se indica que el boton de "actualizar" que esta estatico en el html desaparezca
+    //Con esta sentencia se hace desaparecer el boton de "actualizar" que esta estatico en el html
     document.getElementById('btnAdd').style.display = 'none';
 
-    //Para actualizar los datos, una vez se apriete el boton "editar" de la tabla
+    //Para actualizar los datos, cuando se aprieta el boton "editar" de la tabla
     //solo debe quedar el boton "actualizar" en el formulario, por lo tanto el boton de "enviar datos" 
-    //se bloquara cuando se ejecute esta funcion.
+    //se bloqueara cuando se ejecute esta funcion.
     //En los parametros se indican los ids de los dos botones, el que se quiere dejar y el que se quiere bloquear
     document.getElementById('btnUpdate', btnAdd).style.display = 'block';
 
@@ -166,7 +162,7 @@ function updateData(index){
     document.getElementById('inputProduct').value = assessSub[index].product;
     document.getElementById('inputAssess').value = assessSub[index].assess;
 
-    //Funcion para actulizar datos
+    //Funcion para actualizar datos
     document.querySelector('#btnUpdate').onclick = function(){
         if(validateForm() == true){
 
