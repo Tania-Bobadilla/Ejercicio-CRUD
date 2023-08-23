@@ -1,0 +1,200 @@
+/* Fuente header y footer */
+@font-face {
+    font-family: Reef;
+    src: url(./fonts/Reef.otf) format('opentype');
+}
+
+/* Fuente main*/
+@font-face {
+    font-family: Consola;
+    src: url(./fonts/Consola.ttf) format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://e0.pxfuel.com/wallpapers/448/609/desktop-wallpaper-mint-green-gradient-watercolor-vector-background-2198948-vector-art-at-vecteezy-mint-green-abstract.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Titulo */
+header{
+    padding: 20px;
+    background-color: #75ddc583;
+    max-width: 100%;
+    color: #099473;
+    width: 100%;
+    font-family: Reef, sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+h2{
+    margin: 15px 0 0;
+}
+
+/* Contenedor principal */
+
+.container {
+    /* width:100%; 
+    max-width: none; */
+    display: flex;
+    justify-content: space-evenly;
+    font-family: Consola, sans-serif;   
+}
+
+/* Formulario */
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-box, .product-box, .assess-box{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-box{
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin: 0 0 10px;
+}
+
+label, th{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    color: #099473;
+    text-align: center;
+}
+
+input{
+    padding: 5px 0;
+    text-align: center;
+    font: inherit;
+    border-radius: 5px;
+    border-style: solid;
+    color: black
+}
+
+#inputAssess{
+    width: 250px
+}
+
+#btnAdd, #btnUpdate, .update-btn, .delete-btn{
+    margin: 5px;
+    padding: 8px;
+	border: none;
+	border-radius: 10px;
+	font: inherit;
+    font-size: 15px;
+    font-weight: bold;
+	cursor: pointer;
+	outline: inherit;
+
+}
+
+.delete-btn, #btnAdd{
+    background-color: #e624ff;
+    color: #f9d0ff;
+}
+
+.update-btn, #btnUpdate{
+    background-color: #9fad1d;
+    color: #dff1af;
+    font-weight: bold; 
+}
+
+/* Tabla */
+.table-section{
+    grid-area: table;
+}
+
+table{
+    vertical-align: middle;
+    text-align: center;
+    padding: 0 10px;
+    
+}
+
+.user, .product, .assess, .actions{
+    padding: 10px;
+}
+
+td{
+    padding: 0 0 15px; 
+}
+
+/* Footer */
+footer{
+    padding: 20px;
+    font-size: 15px;
+    min-width: 100%;
+    background-color: #deeb689a;
+    color: #849111;
+    font-family: Reef, sans-serif;
+    font-size: 18px;
+
+}
+
+footer p{
+    text-align: center;
+    margin: 20px;
+}
+
+/* Media queries */
+
+@media(max-width: 854px) and (min-width: 350px){
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 550px)and (min-width: 350px){
+
+    header {
+        font-size: 15px;
+    }
+    
+    label, th{
+        font-size: 15px;
+    }
+
+    input{
+        font-size: 15px;
+    }
+
+    #btnAdd, #btnUpdate, .update-btn, .delete-btn{
+        margin: 5px;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    footer{
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    /* .user, .product, .assess, .actions{
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+    } */
+}
