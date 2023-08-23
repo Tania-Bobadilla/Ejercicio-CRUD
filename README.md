@@ -14,7 +14,8 @@ El objetivo del siguiente ejercicios es aplicar las operaciones CRUD (Create, Re
 ## 4. Diseño responsivo
 La página cuenta con Media Queries que la hacen resposiva a partir de los 854px y los 550px y mejoran su visibilidad en dispositivos portátiles pequeños.}
 ![media2](https://github.com/Tania-Bobadilla/Ejercicio_CRUD/assets/135383254/65694d71-196b-42c8-8aa5-f1bd94403669)
-![media1](https://github.com/Tania-Bobadilla/Ejercicio_CRUD/assets/135383254/279cbc64-b243-4be3-8364-2ac20444f059)
+
+![media11](https://github.com/Tania-Bobadilla/Ejercicio_CRUD/assets/135383254/cdea48b2-2e47-420c-8e75-45a8dc0dfc37)
 
 
 
